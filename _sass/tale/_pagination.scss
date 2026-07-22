@@ -1,0 +1,45 @@
+.pagination {
+  border-top: .5px solid $grey-2;
+  font-family: $sans-serif;
+  padding-top: 2rem;
+  position: relative;
+  text-align: center;
+
+  span {
+    color: $default-shade;
+    font-size: 16px;
+  }
+
+  .top {
+    @include transition(all .3s ease-out);
+    color: $default-color;
+    font-family: $sans-serif;
+    font-size: 16px;
+    opacity: .6;
+
+    &:hover {
+      opacity: 1;
+      transition: color 0.3s ease;
+    }
+
+    &::after {
+      content: " ↑";  /* Arrow character */
+      position: relative;
+      left: 0;
+      transition: bottom 0.3s ease;  /* Moves the arrow on hover */
+    }
+
+    &:hover::after {
+      bottom: 5px;  /* Moves arrow to the right on hover */
+    }
+  }
+
+
+  .left {
+    left: 0;
+  }
+
+  .right {
+    right: 0;
+  }
+}
